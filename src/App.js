@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Login from './components/Login/Login';
 import Admin from './components/Admin/Admin';
+import CheckOut from './components/CheckOut/CheckOut';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path='/admin'>
           <Admin/>
+        </Route>
+        <Route path='/checkout'>
+          <CheckOut></CheckOut>
         </Route>
       </Switch>
     </Router>
