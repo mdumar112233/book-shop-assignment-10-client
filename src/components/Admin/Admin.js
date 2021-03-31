@@ -41,9 +41,21 @@ const Admin = () => {
             </div>
             <div className="admin-submit">
                 <form action="">
-                    <input type="text" placeholder='Enter your naem'/>
-                    <input type="file" onChange={handleImage}/>
-                    <input type="submit" value='save'/>
+                    <div className="add-book-data">
+                    <div className="input-one">
+                        <label htmlFor="">Add name</label><br/>
+                        <input type="text" onBlur={handleInput} name='name' placeholder='Enter your naem'/><br/><br/>
+                        <label htmlFor="">Add price</label><br/>
+                        <input type="number" onBlur={handleInput} name='price'  placeholder='Enter author naem'/>
+                    </div>
+                    <div className="input-two">
+                    <label htmlFor="">Add author name</label><br/>
+                        <input type="text" onBlur={handleInput} name='author' placeholder='Enter author name'/><br/><br/>
+                        <label htmlFor="">Add a cover photo</label><br/>
+                        <input type="file" name='image' onChange={handleImage}/><br/><br/>
+                        <input type="submit" value='save'/>
+                    </div>
+                    </div>
                 </form>
             </div>
             </div>
