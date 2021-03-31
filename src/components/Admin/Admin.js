@@ -1,8 +1,23 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Admin.css';
 const Admin = () => {
+    const [addBook, setAddBook] = useState({
+        name: '',
+        author: '',
+        price: '',
+        image: ''
+    })
+    // const [imageURL, setImageURl] = useState(null);
+
+    const handleInput = e => {
+        console.log(e.target.name, e.target.value)
+        const newAddBook = {...addBook};
+        newAddBook[e.target.name] = e.target.value;
+        setAddBook(newAddBook);
+    }
+
     const handleImage = e => {
         console.log(e.target.files)
         const imageData = new FormData();
@@ -11,12 +26,26 @@ const Admin = () => {
 
         axios.post('https://api.imgbb.com/1/upload', imageData)
           .then(res => {
-            // setImageUrl(response.data.data.display_url);
-            console.log(res)
-          })
+            setAddBook(res.data.data.display_url);
+        })
           .catch(function (error) {
             console.log(error);
           });
+    }
+
+    const handleSubmit = e => {
+        const addBookToDataBase = {...addBook};
+        // if(imageURL){
+            fetch('http://localhost:5000/addBook', {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(addBookToDataBase)
+        })
+        .then(res => {
+            console.log('save data successfully')
+        })
+        // }
+        e.preventDefault();
     }
     return (
         <div className='admin'>
@@ -40,7 +69,7 @@ const Admin = () => {
                 </div>
             </div>
             <div className="admin-submit">
-                <form action="">
+                <form onSubmit={handleSubmit}>
                     <div className="add-book-data">
                     <div className="input-one">
                         <label htmlFor="">Add name</label><br/>
