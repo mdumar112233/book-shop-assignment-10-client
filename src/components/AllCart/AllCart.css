@@ -1,0 +1,18 @@
+.card-img{
+    width: auto;
+    height: 180px;
+    object-fit: cover;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.cost{
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+.main-card{
+    border: 0;
+}
