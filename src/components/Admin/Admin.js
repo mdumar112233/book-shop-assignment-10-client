@@ -7,12 +7,10 @@ const Admin = () => {
         name: '',
         author: '',
         price: '',
-        image: ''
     })
-    // const [imageURL, setImageURl] = useState(null);
+    const [imageURL, setImageURl] = useState(null);
 
     const handleInput = e => {
-        console.log(e.target.name, e.target.value)
         const newAddBook = {...addBook};
         newAddBook[e.target.name] = e.target.value;
         setAddBook(newAddBook);
@@ -26,16 +24,16 @@ const Admin = () => {
 
         axios.post('https://api.imgbb.com/1/upload', imageData)
           .then(res => {
-            setAddBook(res.data.data.display_url);
+            setImageURl(res.data.data.display_url);
         })
           .catch(function (error) {
             console.log(error);
           });
     }
 
-    const handleSubmit = e => {
-        const addBookToDataBase = {...addBook};
-        // if(imageURL){
+    const handleSubmit = (e) => {
+        const addBookToDataBase = {...addBook,image: imageURL};
+        if(imageURL){
             fetch('http://localhost:5000/addBook', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
@@ -44,7 +42,7 @@ const Admin = () => {
         .then(res => {
             console.log('save data successfully')
         })
-        // }
+        }
         e.preventDefault();
     }
     return (
