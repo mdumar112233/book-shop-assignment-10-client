@@ -1,0 +1,48 @@
+.manage-container{
+    display: flex;
+}
+.manage-menu{
+    width: 17%;
+    height: 100vh;
+    background-color: #006266;
+}
+.manage-menu-list{
+    margin-top: 30px;
+    font-weight: 900;
+    margin-left: 10px;
+}
+.manage-menu-list h5{
+    color: #fff;
+}
+.manage-menu-list ul{
+    list-style: none;
+    margin-top: 40px;
+}
+.manage-menu-list ul .link{
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 4px;
+    display: block;
+}
+.manage-book{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 70%;
+}
+table{
+    width: 100%;
+}
+th:nth-child(3){
+    padding-right: 83px;
+}
+th:nth-child(2){
+    padding-left: 25px;
+}
+
+
+
+
+
+
+
+

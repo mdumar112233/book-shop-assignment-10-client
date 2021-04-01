@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import AllCart from '../AllCart/AllCart';
+import Header from '../Header/Header';
 
 const Home = () => {
 const [allBook, setAllBook] = useState([]);
@@ -14,10 +15,13 @@ useEffect(() => {
     .then(data => setAllBook(data))
 }, [])
     return (
-        <div className='container'>
-            {
-                allBook.map(item => <AllCart item={item}></AllCart>)
-            }
+        <div>
+        <Header></Header>
+            <div className="container">
+                {
+                    allBook.map(item => <AllCart item={item}></AllCart>)
+                }
+            </div>
         </div>
     );
 };

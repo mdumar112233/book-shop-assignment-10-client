@@ -7,18 +7,16 @@ table{
     width: 80%;
 }
 th, td{
-    /* border-bottom: 1px solid rgba(128, 128, 128, 0.233);
-    border-right: 10%; */
     width: 50%;
 }
 th{
     border-bottom: 1px solid rgba(128, 128, 128, 0.233);
 }
-tr:nth-child(3){
+tr:nth-child(2){
     border-bottom: 1px solid rgba(128, 128, 128, 0.233);
 }
 td{
-    padding-left: 8px;
+    padding: 10px 0;
 }
 td:nth-child(2){
     padding-left: 23px;

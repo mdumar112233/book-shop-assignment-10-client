@@ -1,0 +1,12 @@
+table{
+    width: 80%;
+}
+tr{
+    width: 100%;
+}
+.edit-delete{
+    display: flex;
+}
+td{
+    width: 43%;
+}

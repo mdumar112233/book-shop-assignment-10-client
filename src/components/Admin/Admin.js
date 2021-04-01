@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { NavLink } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Admin.css';
 const Admin = () => {
@@ -51,10 +52,10 @@ const Admin = () => {
             <div className="admin-menu">
                 <div className="aside-menu">
                     <div className="menu-list">
-                    <h5>Learn Something New</h5>
+                    <h5><Link className='home-logo' to='/home'>Learn Something New</Link></h5>
                         <ul>
                             <li>
-                                <Link className='link' to='manager'>Manage books</Link>
+                                <Link className='link' to='manageBook'>Manage books</Link>
                             </li>
                             <li>
                                 <Link className='link' >Add books</Link>
