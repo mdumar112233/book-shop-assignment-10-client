@@ -11,18 +11,15 @@
     justify-content: space-between;
 }
 .admin-submit{
-    margin-left: 30px;
+    margin-left: 40px;
     margin-top: 30px;
-    width: 50%;
+    width: 40%;
 }
 .menu-list{
     margin-top: 30px;
     font-weight: 900;
     margin-left: 10px;
 }
-/* .menu-list h5{
-    color: #fff;
-} */
 .menu-list ul{
     list-style: none;
     margin-top: 40px;
@@ -36,4 +33,14 @@
 .home-logo{
     text-decoration: none;
     color: #fff;
+}
+.photo-upload{
+    border: 1px solid gray;
+    width: 120px;
+    height: 40px;
+    background-color: lightslategrey;
+    padding: 6px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
 }

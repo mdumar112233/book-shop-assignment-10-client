@@ -78,9 +78,11 @@ const Admin = () => {
                     </div>
                     <div className="input-two">
                     <label htmlFor="">Add author name</label><br/>
-                        <input type="text" onBlur={handleInput} name='author' placeholder='Enter author name'/><br/><br/>
-                        <label htmlFor="">Add a cover photo</label><br/>
-                        <input type="file" name='image' onChange={handleImage}/><br/><br/>
+                        <input type="text" onBlur={handleInput} name='author' placeholder='Enter author name'/><br/><br/><br/>
+                        <label htmlFor="upload-photo" className='photo-upload'>photo upload
+                        <input type="file" name='image' id='upload-photo' style={{visibility: 'hidden'}}  onChange={handleImage}/>
+                        </label><br/>
+                        <br/><br/>
                         <input type="submit" value='save'/>
                     </div>
                     </div>
