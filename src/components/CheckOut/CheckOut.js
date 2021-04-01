@@ -32,12 +32,12 @@ const CheckOut = () => {
         <div>
             <Header></Header>
             <div className='checkout-main'>
-                <h3>Check Out</h3>
+                <h4 style={{marginBottom: '20px', fontWeight:'900'}}>Check Out</h4>
                 {
                     bookInfo.map(book => <CheckOutInfo book={book}></CheckOutInfo>)
                 }
-                <button onClick={handleOrderInfo} className='checkout-btn'>Checkout</button>
             </div>
+            <button onClick={handleOrderInfo} className='checkout-btn'>Checkout</button>
         </div>
 
     );

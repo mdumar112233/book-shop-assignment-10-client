@@ -13,18 +13,24 @@ const AllCart = (props) => {
     }
     return (
         <div style={{float: 'left', margin: '15px'}}>
-            <Card className='main-card' style={{ width: '15rem', height:'22rem'}}>
-            <Card.Img className='card-img' variant="top" src={image} />
+            <Card className='main-card' style={{ width: '15.4rem', height:'26rem'}}>
+                <div className="img-div">
+                    <Card.Img className='card-img' variant="top" src={image} />
+                </div>
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>
                 {author}
                 </Card.Text>
-                <div className='card-footer'>
-                    <Card.Text className='cost'>${price}</Card.Text>
-                    <Button variant="primary" onClick={handleBtn}>Buy Now</Button>
-                </div>
             </Card.Body>
+            <div className="card-btn-price">
+                    <div className="price">
+                        <h4 style={{color: '#eb4d4b'}}>${price}</h4>
+                    </div>
+                    <div>
+                        <Button style={{backgroundColor: '#eb4d4b', border: '0'}}  onClick={handleBtn}>Buy Now</Button>
+                    </div>
+                </div>
             </Card>
         </div>
     );

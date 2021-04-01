@@ -5,6 +5,7 @@
 .store-title{
     margin: 20px;
     font-size: 15px;
+    font-family: 'Domine', serif;
 }
 .menu ul li{
     display: inline-block;

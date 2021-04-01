@@ -15,9 +15,7 @@ const Header = () => {
                     <Link to='/order'><li href="">Orders</li></Link>
                     <Link to='/admin'><li href="">Admin</li></Link>
                     <Link><li href="">Deals</li></Link>
-                    <Link to='/login'><li href="">Login</li></Link>
-                    <Link to='/checkout'><li href="">checkout</li></Link>
-                    <Link to='/demo'><li href="">demo</li></Link>
+                    <Link to='/login'><li style={{color}} href="">Login</li></Link>
                 </ul>
             </div>
             </div>

@@ -1,12 +1,19 @@
+.img-div{
+    width: 245px;
+    padding: 20px;
+    background: rgba(128, 128, 128, 0.158);
+}
 .card-img{
     width: auto;
     height: 180px;
     object-fit: cover;
+    border-radius: 10px;
 }
-.card-footer{
+.card-btn-price{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
+    margin-bottom: 20px;
 }
 .cost{
     font-size: 20px;
