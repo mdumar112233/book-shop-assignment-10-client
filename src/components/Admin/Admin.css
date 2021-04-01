@@ -38,12 +38,8 @@ h4{
 .menu-list ul .link{
     text-decoration: none;
     color: #fff;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     display: block;
-}
-.home-logo{
-    text-decoration: none;
-    color: #fff;
 }
 .photo-upload{
     border: 1px solid gray;
@@ -66,8 +62,6 @@ h4{
     border: 0;
     border-radius: 3px;
 }
-.home-link{
-    font-size: 20px;
-    margin-right: 5px;
-    margin-bottom: 10px;
+.menu-list h5{
+    color: #fff;
 }

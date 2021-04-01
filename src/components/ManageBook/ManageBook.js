@@ -5,7 +5,7 @@ import './ManageBook.css';
 
 const ManageBook = () => {
     const [manageBook , setManageBook] = useState([]);
-    console.log(manageBook.length)
+    console.log(manageBook)
     useEffect(() => {
         fetch('http://localhost:5000/products', {
             method: 'GET',

@@ -52,11 +52,8 @@ const Admin = () => {
             <div className="admin-menu">
                 <div className="aside-menu">
                     <div className="menu-list">
-                    {/* <Link to='/home'><li style={{textDecoration: 'none'}} href="">Learn Something New</li></Link> */}
+                        <h5>Learn Something New</h5>
                         <ul>
-                            <li>
-                                <Link className='link home-link' to='/home'>Learn Something New</Link>
-                            </li>
                             <li>
                                 <Link className='link' to='/manageBook'>Manage books</Link>
                             </li>
