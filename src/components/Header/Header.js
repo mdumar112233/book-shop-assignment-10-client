@@ -15,7 +15,7 @@ const Header = () => {
                     <Link to='/order'><li href="">Orders</li></Link>
                     <Link to='/admin'><li href="">Admin</li></Link>
                     <Link><li href="">Deals</li></Link>
-                    <Link to='/login'><li style={{color}} href="">Login</li></Link>
+                    <Link to='/login'><li className='login-btn' href="">Login</li></Link>
                 </ul>
             </div>
             </div>

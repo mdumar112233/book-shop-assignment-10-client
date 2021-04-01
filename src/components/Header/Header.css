@@ -13,3 +13,9 @@
     color: #000;
     font-weight: bold;
 }
+.menu .login-btn{
+    background: #e74c3c;
+    padding: 8px 12px;
+    color: #fff;
+    border-radius: 2px;
+}

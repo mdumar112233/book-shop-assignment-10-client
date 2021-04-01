@@ -4,10 +4,11 @@ import "firebase/auth";
 import { UserContext } from '../../App';
 import './Login.css';
 import firebaseConfig from './fireBaseConfig';
+import './Login.css';
 
-// if(firebase.apps.length === 0){
-// }
-firebase.initializeApp(firebaseConfig);
+if(firebase.apps.length === 0){
+  firebase.initializeApp(firebaseConfig);
+}
 
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -30,9 +31,11 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <h3>login</h3>
+        <div className='cotainer'>
+          <div className="login-section">
+            <h3>Login</h3>
             <button onClick={handleSignIn}>Login With Google</button>
+          </div>
         </div>
     );
 };
