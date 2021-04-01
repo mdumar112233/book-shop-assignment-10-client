@@ -1,9 +1,10 @@
 import React from 'react';
 import demoImage from '../../books/image 20.png';
 
-const OrderCard = () => {
+const OrderCard = (props) => {
+    const {admin, email, date, name, author, price, image} = props.order;
     return (
-        <div style={{marginLeft: '30px'}}>
+        <div style={{marginLeft: '30px', float: 'left'}}>
         <div className="order-container">
             <div className="order">
                 <div className="order-img">
@@ -12,15 +13,15 @@ const OrderCard = () => {
                 <div className="order-detail">
                     <div className="order-info">
                         <h6>Order Info</h6>
-                        <small>md umar faruk</small><br/>
-                        <small>mdumarfaruk187326@gmail.com</small><br/>
-                        <small>2021-04-01T13:22:43.562Z</small>
+                        <small>{admin}</small><br/>
+                        <small>{admin}</small><br/>
+                        <small>{admin}</small>
                     </div><br/>
                     <div className="order-book-info">
                         <h6>Book Info</h6>
-                        <small>Eloqurent javascript</small><br/>
-                        <small>Marjin Haverbeke</small><br/>
-                        <small>132</small>
+                        <small>{admin}</small><br/>
+                        <small>{admin}</small><br/>
+                        <small>${admin}</small>
                     </div>
                     
                 </div>
