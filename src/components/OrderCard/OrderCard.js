@@ -1,5 +1,5 @@
 import React from 'react';
-import demoImage from '../../books/image 20.png';
+import './OrderCard.css';
 
 const OrderCard = (props) => {
     const {admin, email, date, name, author, price, image} = props.order;
@@ -8,20 +8,20 @@ const OrderCard = (props) => {
         <div className="order-container">
             <div className="order">
                 <div className="order-img">
-                    <img src={demoImage} alt=""/>
+                    <img src={image} alt=""/>
                 </div>
                 <div className="order-detail">
                     <div className="order-info">
                         <h6>Order Info</h6>
                         <small>{admin}</small><br/>
-                        <small>{admin}</small><br/>
-                        <small>{admin}</small>
+                        <small>{email}</small><br/>
+                        <small>{date}</small>
                     </div><br/>
                     <div className="order-book-info">
                         <h6>Book Info</h6>
-                        <small>{admin}</small><br/>
-                        <small>{admin}</small><br/>
-                        <small>${admin}</small>
+                        <small>{name}</small><br/>
+                        <small>{author}</small><br/>
+                        <small>${price}</small>
                     </div>
                     
                 </div>
