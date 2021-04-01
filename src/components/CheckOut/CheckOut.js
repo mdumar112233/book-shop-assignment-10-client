@@ -11,7 +11,7 @@ const CheckOut = () => {
     const [bookInfo, setBookInfo] = useState([]);
 
     const handleOrderInfo = () =>{
-        const orderInfo = {...bookInfo[0], admin: loggedInUser.name, email: loggedInUser.email, data: new Date};
+        const orderInfo = {...bookInfo[0], admin: loggedInUser.name, email: loggedInUser.email, date: new Date};
         console.log(orderInfo);
         fetch('http://localhost:5000/orders', {
             method: 'POST',
@@ -27,7 +27,7 @@ const CheckOut = () => {
         fetch(`http://localhost:5000/checkOutProduct/${_id}`)
         .then(res => res.json())
         .then(data => setBookInfo(data))
-    }, [])
+    }, [_id])
     return (
         <div>
             <Header></Header>
