@@ -16,7 +16,7 @@ const Orders = () => {
         <div className='container'>
             <h3>This is order page</h3>
                 {
-                    orderInfo.map(order => <OrderCard></OrderCard>)
+                    orderInfo.map(order => <OrderCard order={order}></OrderCard>)
                 }
         </div>
     );

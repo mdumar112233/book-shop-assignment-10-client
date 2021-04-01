@@ -1,9 +1,9 @@
 import React from 'react';
 import demoImage from '../../books/image 20.png';
 
-const OrderCard = () => {
+const Demo = () => {
     return (
-        <div style={{marginLeft: '30px'}}>
+        <div className='container'>
         <div className="order-container">
             <div className="order">
                 <div className="order-img">
@@ -35,4 +35,4 @@ const OrderCard = () => {
     );
 };
 
-export default OrderCard;
+export default Demo;

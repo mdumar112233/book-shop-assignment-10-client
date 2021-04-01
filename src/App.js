@@ -12,6 +12,7 @@ import CheckOut from './components/CheckOut/CheckOut';
 import { createContext, useState } from 'react';
 import ManageBook from './components/ManageBook/ManageBook';
 import Orders from './components/Orders/Orders';
+import Demo from './components/OrderDemo/Demo';
 
 export const UserContext = createContext();
 
@@ -42,6 +43,9 @@ function App() {
         </Route>
         <Route path='/order'>
           <Orders/>
+        </Route>
+        <Route path="/demo">
+          <Demo/>
         </Route>
       </Switch>
     </Router>
