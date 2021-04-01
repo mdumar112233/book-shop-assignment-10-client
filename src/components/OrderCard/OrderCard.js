@@ -4,7 +4,7 @@ import './OrderCard.css';
 const OrderCard = (props) => {
     const {admin, email, date, name, author, price, image} = props.order;
     return (
-        <div style={{marginLeft: '30px', float: 'left'}}>
+        <div style={{marginLeft: '110px', float: 'left'}}>
         <div className="order-container">
             <div className="order">
                 <div className="order-img">

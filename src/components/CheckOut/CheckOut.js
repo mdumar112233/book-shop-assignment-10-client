@@ -11,7 +11,7 @@ const CheckOut = () => {
     const [bookInfo, setBookInfo] = useState([]);
 
     const handleOrderInfo = () =>{
-        const orderInfo = {...bookInfo[0], admin: loggedInUser.name, email: loggedInUser.email, date: new Date};
+        const orderInfo = {...bookInfo[0], admin: loggedInUser.name, email: loggedInUser.email, date: new Date().toString('dd/mm/yyyy')};
         console.log(orderInfo);
         fetch('http://localhost:5000/orders', {
             method: 'POST',
