@@ -52,10 +52,13 @@ const Admin = () => {
             <div className="admin-menu">
                 <div className="aside-menu">
                     <div className="menu-list">
-                    <h5><Link className='home-logo' to='/home'>Learn Something New</Link></h5>
+                    {/* <Link to='/home'><li style={{textDecoration: 'none'}} href="">Learn Something New</li></Link> */}
                         <ul>
                             <li>
-                                <Link className='link' to='manageBook'>Manage books</Link>
+                                <Link className='link home-link' to='/home'>Learn Something New</Link>
+                            </li>
+                            <li>
+                                <Link className='link' to='/manageBook'>Manage books</Link>
                             </li>
                             <li>
                                 <Link className='link' >Add books</Link>
@@ -67,27 +70,30 @@ const Admin = () => {
                     </div>
                 </div>
             </div>
-            <div className="admin-submit">
+                <div>
+                    <h4>Add book</h4>
+                <div className="admin-submit">
                 <form onSubmit={handleSubmit}>
                     <div className="add-book-data">
                     <div className="input-one">
                         <label htmlFor="">Add name</label><br/>
-                        <input type="text" onBlur={handleInput} name='name' placeholder='Enter your naem'/><br/><br/>
+                        <input className='edit-input' type="text" onBlur={handleInput} name='name' placeholder='Enter your naem'/><br/><br/>
                         <label htmlFor="">Add price</label><br/>
-                        <input type="number" onBlur={handleInput} name='price'  placeholder='Enter author naem'/>
+                        <input className='edit-input' type="number" onBlur={handleInput} name='price'  placeholder='Enter author naem'/>
                     </div>
                     <div className="input-two">
                     <label htmlFor="">Add author name</label><br/>
-                        <input type="text" onBlur={handleInput} name='author' placeholder='Enter author name'/><br/><br/><br/>
+                        <input className='edit-input' type="text" onBlur={handleInput} name='author' placeholder='Enter author name'/><br/><br/><br/>
                         <label htmlFor="upload-photo" className='photo-upload'>photo upload
                         <input type="file" name='image' id='upload-photo' style={{visibility: 'hidden'}}  onChange={handleImage}/>
                         </label><br/>
                         <br/><br/>
-                        <input type="submit" value='save'/>
+                        <input className='submit-btn' type="submit" value='save'/>
                     </div>
                     </div>
                 </form>
             </div>
+                </div>
             </div>
         </div>
     );
