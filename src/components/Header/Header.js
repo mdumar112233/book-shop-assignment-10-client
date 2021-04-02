@@ -1,21 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
+import icon from '../../icons/outlined_menu-512.webp';
 
 const Header = () => {
+
     return (
-        <div className='responsive-container'>
+        <div className='responsive-container container'>
             <div className="main-header">
             <div className="store-title">
+                <div className="menu-icon">
+                    <img  src={icon} alt=""/>
+                </div>
                 <h4>Learn Something New</h4>
             </div>
-            <div className="menu">
+            <div id='slide' className="menu">
                 <ul>
-                    <Link to='/home'><li href="">Home</li></Link>
-                    <Link to='/order'><li href="">Orders</li></Link>
-                    <Link to='/admin'><li href="">Admin</li></Link>
-                    <Link><li href="">Deals</li></Link>
-                    <Link to='/login'><li className='login-btn' href="">Login</li></Link>
+                    <li href=""><Link className='menu-link' to='/home'>Home</Link></li> 
+                    <li href=""><Link className='menu-link' to='/order'>Order</Link></li> 
+                    <li href=""><Link className='menu-link' to='/admin'>Admin</Link></li> 
+                    <li href=""><Link className='menu-link'>Deals</Link></li> 
+                    <li href=""><Link className='menu-link' className='login-btn' to='/login'>Login</Link></li> 
+
                 </ul>
             </div>
             </div>

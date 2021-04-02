@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { Spinner } from 'react-bootstrap';
 import AllCart from '../AllCart/AllCart';
 import Header from '../Header/Header';
 
@@ -18,6 +19,9 @@ useEffect(() => {
         <div>
         <Header></Header>
             <div className="container">
+                {
+                    allBook.length === 0 && <Spinner animation="border" />
+                }
                 {
                     allBook.map(item => <AllCart item={item}></AllCart>)
                 }

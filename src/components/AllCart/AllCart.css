@@ -23,3 +23,9 @@
 .main-card{
     border: 0;
 }
+
+@media screen and (max-width: 375px){
+    .main-card{
+        margin-left: 30px;
+    }
+}

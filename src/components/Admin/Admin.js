@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { NavLink } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Admin.css';
 const Admin = () => {

@@ -12,7 +12,7 @@ const AllCart = (props) => {
         history.push(url);
     }
     return (
-        <div style={{float: 'left', margin: '15px'}}>
+        <div style={{float: 'left', margin: '15px', position: 'relative'}}>
             <Card className='main-card' style={{ width: '15.4rem', height:'26rem'}}>
                 <div className="img-div">
                     <Card.Img className='card-img' variant="top" src={image} />
