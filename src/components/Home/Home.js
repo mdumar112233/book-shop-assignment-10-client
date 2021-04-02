@@ -20,7 +20,7 @@ useEffect(() => {
         <Header></Header>
             <div className="container">
                 {
-                    allBook.length === 0 && <Spinner animation="border" />
+                    allBook.length === 0 && <Spinner style={{marginLeft: '32rem', marginTop: '5rem'}} animation="border" />
                 }
                 {
                     allBook.map(item => <AllCart item={item}></AllCart>)

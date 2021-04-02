@@ -2,8 +2,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
@@ -12,6 +11,7 @@ import CheckOut from './components/CheckOut/CheckOut';
 import { createContext, useState } from 'react';
 import ManageBook from './components/ManageBook/ManageBook';
 import Orders from './components/Orders/Orders';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -20,6 +20,7 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
+      <p>email: {loggedInUser.email}</p>
       <Switch>
         <Route exact path='/'>
           <Home/>
@@ -30,18 +31,18 @@ function App() {
         <Route path='/login'>
           <Login/>
         </Route>
-        <Route path='/admin'>
+        <PrivateRoute path='/admin'>
           <Admin/>
-        </Route>
-        <Route path='/checkout/:_id'>
+        </PrivateRoute>
+        <PrivateRoute path='/checkout/:_id'>
           <CheckOut></CheckOut>
-        </Route>
+        </PrivateRoute>
         <Route path='/manageBook'>
           <ManageBook></ManageBook>
         </Route>
-        <Route path='/order'>
+        <PrivateRoute path='/order'>
           <Orders/>
-        </Route>
+        </PrivateRoute>
       </Switch>
     </Router>
     </UserContext.Provider>

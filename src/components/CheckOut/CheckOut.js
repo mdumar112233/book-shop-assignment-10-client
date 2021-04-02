@@ -9,6 +9,7 @@ const CheckOut = () => {
     const {_id} = useParams();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [bookInfo, setBookInfo] = useState([]);
+    console.log(loggedInUser)
 
     const handleOrderInfo = () =>{
         const orderInfo = {...bookInfo[0], admin: loggedInUser.name, email: loggedInUser.email, date: new Date().toString('dd/mm/yyyy')};
