@@ -8,7 +8,7 @@ const Home = () => {
 const [allBook, setAllBook] = useState([]);
 
 useEffect(() => {
-    fetch('http://localhost:5000/products', {
+    fetch('https://git.heroku.com/young-ravine-72639.git/products', {
         method: 'GET',
         headers: {'content-type': 'application/json'}
     })
