@@ -2,10 +2,10 @@ import React from 'react';
 import './BookTable.css';
 import Edit from '../../icons/Group 307.png';
 import Delete from '../../icons/Group 33150.png';
+import { useHistory } from 'react-router';
 
 const BookTable = (props) => {
     const {name, author, price, _id} = props.manage;
-    console.log(_id)
 
     const handleDelete = (e) => {
         fetch(`http://localhost:5000/delete/${_id}`, {
@@ -13,9 +13,9 @@ const BookTable = (props) => {
         })
         .then(res => res.json())
         .then(result => {
-            if(result){
-                console.log('item delete')
-            }
+            console.log(result)
+            if(result)
+            e.target.parentElement.parentElement.parentElement.style.display = 'none';
         })
     }
 
