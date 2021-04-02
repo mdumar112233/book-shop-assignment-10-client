@@ -1,7 +1,7 @@
 .main-header{
     display: flex;
     justify-content: space-between;
-    
+    margin-left: -35px;
 }
 .store-title{
     margin: 20px;
