@@ -19,3 +19,43 @@
     color: #fff;
     border-radius: 2px;
 }
+
+@media screen and (max-width: 375px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .main-header {
+        display: block;
+        background-color: aquamarine;
+        justify-content: initial;
+        width: 100%;
+    }
+    /* .container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    } */
+    .store-title{
+        margin: 0;
+        font-size: 15px;
+        font-family: 'Domine', serif;
+    }
+    .store-title h4{
+        padding-top: 10px;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

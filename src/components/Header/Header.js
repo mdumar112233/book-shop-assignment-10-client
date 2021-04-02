@@ -4,7 +4,7 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <div className='container'>
+        <div className='responsive-container'>
             <div className="main-header">
             <div className="store-title">
                 <h4>Learn Something New</h4>
