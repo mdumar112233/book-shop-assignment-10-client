@@ -14,7 +14,7 @@ const BookTable = (props) => {
         .then(res => res.json())
         .then(result => {
             if(result){
-                e.target.parentNode.style.display = 'none';
+                console.log('item delete')
             }
         })
     }

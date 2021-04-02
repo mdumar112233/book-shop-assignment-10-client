@@ -2,14 +2,14 @@
     display: flex;
 }
 .manage-menu{
-    width: 17%;
+    width: 283px;
     height: 100vh;
     background-color: #006266;
 }
 .manage-menu-list{
     margin-top: 30px;
     font-weight: 900;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 .manage-menu-list h5{
     color: #fff;
@@ -21,16 +21,16 @@
 .manage-menu-list ul .link{
     text-decoration: none;
     color: #fff;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     display: block;
 }
 .manage-book{
-    margin-left: 30px;
+    margin-left: 40px;
     margin-top: 30px;
-    width: 70%;
+    width: 80%;
 }
 table{
-    width: 100%;
+    width: 78%;
 }
 th:nth-child(3){
     padding-right: 83px;
