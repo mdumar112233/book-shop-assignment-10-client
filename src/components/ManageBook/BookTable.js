@@ -8,7 +8,7 @@ const BookTable = (props) => {
     const {name, author, price, _id} = props.manage;
 
     const handleDelete = (e) => {
-        fetch(`http://localhost:5000/delete/${_id}`, {
+        fetch(`https://young-ravine-72639.herokuapp.com/delete/${_id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

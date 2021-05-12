@@ -13,7 +13,7 @@ const AllCart = (props) => {
     }
     return (
         <div style={{float: 'left', margin: '15px', position: 'relative'}}>
-            <Card className='main-card' style={{ width: '15.4rem', height:'26rem'}}>
+            <Card className='main-card' style={{ width: '15.4rem', height:'26rem', border: '1px solid gray'}}>
                 <div className="img-div">
                     <Card.Img className='card-img' variant="top" src={image} />
                 </div>

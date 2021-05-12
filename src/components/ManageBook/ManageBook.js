@@ -7,7 +7,7 @@ const ManageBook = () => {
     const [manageBook , setManageBook] = useState([]);
     console.log(manageBook)
     useEffect(() => {
-        fetch('http://localhost:5000/products', {
+        fetch('https://young-ravine-72639.herokuapp.com/products', {
             method: 'GET',
             headers: {'content-type': 'application/json'}
         })

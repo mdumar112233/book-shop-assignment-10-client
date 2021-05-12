@@ -34,7 +34,7 @@ const Admin = () => {
     const handleSubmit = (e) => {
         const addBookToDataBase = {...addBook,image: imageURL};
         if(imageURL){
-            fetch('http://localhost:5000/addBook', {
+            fetch('https://young-ravine-72639.herokuapp.com/addBook', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(addBookToDataBase)

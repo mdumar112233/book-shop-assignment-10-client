@@ -14,7 +14,7 @@ const CheckOut = () => {
     const handleOrderInfo = () =>{
         const orderInfo = {...bookInfo[0], admin: loggedInUser.name, email: loggedInUser.email, date: new Date().toString('dd/mm/yyyy')};
         console.log(orderInfo);
-        fetch('http://localhost:5000/orders', {
+        fetch('https://young-ravine-72639.herokuapp.com/orders', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(orderInfo)
@@ -25,7 +25,7 @@ const CheckOut = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/checkOutProduct/${_id}`)
+        fetch(`https://young-ravine-72639.herokuapp.com/checkOutProduct/${_id}`)
         .then(res => res.json())
         .then(data => setBookInfo(data))
     }, [_id])

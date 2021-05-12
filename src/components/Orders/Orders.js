@@ -7,7 +7,7 @@ const Orders = () => {
     const [orderInfo, setOrderInfo] = useState([]);
     console.log(orderInfo.length)
     useEffect(() => {
-        fetch('http://localhost:5000/orderinfo?email='+loggedInUser.email)
+        fetch('https://young-ravine-72639.herokuapp.com?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data => setOrderInfo(data))
     }, [])
