@@ -12,6 +12,7 @@ import { createContext, useState } from 'react';
 import ManageBook from './components/ManageBook/ManageBook';
 import Orders from './components/Orders/Orders';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import CreateAccount from './components/Login/CreateAccount';
 
 export const UserContext = createContext();
 
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path='/login'>
           <Login/>
+        </Route>
+        <Route path='/createAccount'>
+          <CreateAccount/>
         </Route>
         <PrivateRoute path='/admin'>
           <Admin/>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Admin.css';
 const Admin = () => {
     const [addBook, setAddBook] = useState({
@@ -45,13 +45,17 @@ const Admin = () => {
         }
         e.preventDefault();
     }
+    const history = useHistory();
+    const handleHistory = () => {
+        history.push('/');
+    }
     return (
         <div className='admin'>
             <div className="admin-container">
             <div className="admin-menu">
                 <div className="aside-menu">
                     <div className="menu-list">
-                        <h5>Learn Something New</h5>
+                        <h5 onClick={handleHistory}>Learn Something New</h5>
                         <ul>
                             <li>
                                 <Link className='link' to='/manageBook'>Manage books</Link>
